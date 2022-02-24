@@ -1,0 +1,55 @@
+<div>
+  <h3>Directivas en Angular</h3>
+  <ul>
+    <li>*ngIf</li>
+    <li>*ngFor</li>
+  </ul>
+  <div class="row">
+    <div class="col-2">
+      <button *ngIf="!mostrarNgIf"
+              type="button"
+              class="btn btn-primary"
+              (click)="cambiarNgIf()"
+      >
+        Mostrar ngIf
+      </button>
+
+      <button *ngIf="mostrarNgIf"
+              type="button"
+              class="btn btn-danger"
+              (click)="cambiarNgIf()"
+      >
+        Ocultar ngIf
+      </button>
+    </div>
+    <div class="col-2">
+      <button *ngIf="!mostrarNgFor"
+              type="button"
+              class="btn btn-info"
+              (click)="cambiarNgFor()"
+      >
+        Mostrar ngFor
+      </button>
+
+      <button *ngIf="mostrarNgFor"
+              type="button"
+              class="btn btn-warning"
+              (click)="cambiarNgFor()"
+      >
+        Ocultar ngFor
+      </button>
+    </div>
+  </div>
+  <div *ngIf="mostrarNgIf" class="mt-3">
+    <p>Directiva ngIF</p>
+  </div>
+
+  <div *ngIf="mostrarNgFor" class="mt-3">
+    <p>Directiva ngFor</p>
+    <ul>
+      <li *ngFor="let color of colores">
+        {{ color }}
+      </li>
+    </ul>
+  </div>
+</div>

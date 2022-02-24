@@ -1,0 +1,12 @@
+<div class="form-group mt-4">
+  <label >Ingrese el monto en peso</label>
+  <input type="number" class="form-control" [(ngModel)]="montoPesoColombiano">
+</div>
+
+<button type="button" class="btn btn-danger mt-2" (click)="getConversion()">
+  Convertir
+</button>
+
+<h3 class="mt-2">
+  Resultado: {{ conversion }}
+</h3>
