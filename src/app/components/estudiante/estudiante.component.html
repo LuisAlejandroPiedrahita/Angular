@@ -3,12 +3,15 @@
 </p>
 <br>
 <span>{{ getProfesion() }}</span>
+
 <p>{{ edad + 5 }}</p>
+
 <div (keyup)="0">
   <label>Estudiante</label>
   <input #x>
   {{ x.value }}
 </div>
+
 <button type="button"
         (click)="agregar()"
         [disabled]="activar">
@@ -18,3 +21,4 @@
 <label>Estudiante</label>
 <input type="text" [(ngModel)]="direccion">
 {{ direccion }}
+
