@@ -1,5 +1,37 @@
-<div class="container mt-4">
-  <h1>Fundamentos de Angular</h1>
-  <!--<app-calculadora></app-calculadora>-->
-  <app-directivas></app-directivas>
+<app-menu></app-menu>
+<div class="container mt-5">
+  <router-outlet></router-outlet>
 </div>
+<div class="container mt-4">
+  <h1>Comunicacion entre componentes</h1>
+  <h3>Decoradores @Input y @Output</h3>
+  <p>Input: Es la cominicacion entre un componente Padre y un Hijo</p>
+  <p>Output: Es la cominicacion entre un componente Hijo y su Padre</p>
+
+  <div class="m-5" style="background-color: lemonchiffon">
+    <app-form-deporte (deporteCreado)="agregar($event)"></app-form-deporte>
+  </div>
+
+  <app-deporte *ngFor="let deporteElemento of deportes; let i = index"
+               [deporte] = "deporteElemento"
+               [indice] = "i"
+  >
+
+  </app-deporte>
+
+</div>
+
+<div class="container mt-4">
+  <div class="m-5" style="background-color: cadetblue">
+    <app-form-calculadora (conversionCreado)="agregarConversion($event)"></app-form-calculadora>
+  </div>
+  <h3>Resultado</h3>
+  <app-calculadora *ngFor="let conversionElemento of conversiones; let i = index"
+               [conversion] = "conversionElemento"
+               [indice] = "i"
+  >
+
+  </app-calculadora>
+
+</div>
+

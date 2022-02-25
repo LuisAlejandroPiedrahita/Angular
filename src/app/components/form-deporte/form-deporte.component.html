@@ -1,0 +1,15 @@
+<form class="form-row">
+
+  <div class="mb-3">
+    <label for="nombreDeporte">Deporte</label>
+    <input type="text"
+           class="form-control"
+           id="nombreDeporte"
+           name="nombreDeporte"
+           placeholder="Agregue su deporte favorito"
+           [(ngModel)]="nombreDeporte">
+  </div>
+  <div class="mb-3">
+    <button type="button" class="btn btn-primary" (click)="agregar()">Guardar</button>
+  </div>
+</form>

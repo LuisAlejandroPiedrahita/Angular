@@ -1,0 +1,15 @@
+<form class="form-row">
+  <div class="mb-3">
+    <label for="numeroConversion">Ingrese el monto en peso</label>
+    <input type="number"
+           class="form-control"
+           id="numeroConversion"
+           name="numeroConversion"
+           placeholder="Ingrese el monto en peso"
+           [(ngModel)]="montoPesoColombiano">
+  </div>
+</form>
+
+<div class="mb-3">
+  <button type="button" class="btn btn-primary" (click)="convertir()">Convertir</button>
+</div>
